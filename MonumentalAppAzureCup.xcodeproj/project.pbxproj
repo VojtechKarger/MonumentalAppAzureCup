@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		793F08AB2652CBC0003647CC /* TextToSpeech.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793F08AA2652CBC0003647CC /* TextToSpeech.swift */; };
 		79929A7526523D7E00DBD76C /* MonumentalAppAzureCupApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79929A7426523D7E00DBD76C /* MonumentalAppAzureCupApp.swift */; };
 		79929A7926523D8000DBD76C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79929A7826523D8000DBD76C /* Assets.xcassets */; };
 		79929A7C26523D8000DBD76C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79929A7B26523D8000DBD76C /* Preview Assets.xcassets */; };
@@ -37,6 +38,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		793F08AA2652CBC0003647CC /* TextToSpeech.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextToSpeech.swift; sourceTree = "<group>"; };
 		79929A7126523D7E00DBD76C /* MonumentalAppAzureCup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MonumentalAppAzureCup.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79929A7426523D7E00DBD76C /* MonumentalAppAzureCupApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonumentalAppAzureCupApp.swift; sourceTree = "<group>"; };
 		79929A7826523D8000DBD76C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -182,6 +184,7 @@
 				79929AB126523F3800DBD76C /* ChatbotModelExtensionsGetingDataFromURLress.swift */,
 				79929AC5265277D100DBD76C /* ComunicationWithChatbot.swift */,
 				79929AC72652789F00DBD76C /* ChatbotSpeechToText.swift */,
+				793F08AA2652CBC0003647CC /* TextToSpeech.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -334,6 +337,7 @@
 				79929A9E26523F2F00DBD76C /* MessageView.swift in Sources */,
 				79929AA926523F2F00DBD76C /* ExtensionGesture.swift in Sources */,
 				79929AC2265274FF00DBD76C /* ListOfMessages.swift in Sources */,
+				793F08AB2652CBC0003647CC /* TextToSpeech.swift in Sources */,
 				79929ABD26523F3D00DBD76C /* ModelNetworking.swift in Sources */,
 				79929ABF26523F3D00DBD76C /* ChatbotAnswer.swift in Sources */,
 				79929A7526523D7E00DBD76C /* MonumentalAppAzureCupApp.swift in Sources */,

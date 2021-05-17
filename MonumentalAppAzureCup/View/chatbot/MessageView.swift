@@ -72,7 +72,12 @@ struct MessageView: View {
                         .padding(.leading ,(message.who == .user) ? 60:0)
                         .id(message.id)
                         .onAppear(perform: { vm.scroll(scroll: scroll) })
-                        .onTapGesture{ vm.speak(messafe: message.message!) }
+                        .onTapGesture{
+//                            vm.speak(messafe: message.message!)
+                            DispatchQueue.global(qos: .userInitiated).async {
+                                vm.synthesisToSpeaker(messageToSpeak: mess)
+                            }
+                        }
                     
                 }
             }

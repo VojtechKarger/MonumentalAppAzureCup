@@ -11,8 +11,6 @@ import SwiftUI
 
 extension ChatBotModel {
     
-    
-    
     func recognizeMic() {
         //auth...
         let sub = NetworkingData.subSpeechToText
