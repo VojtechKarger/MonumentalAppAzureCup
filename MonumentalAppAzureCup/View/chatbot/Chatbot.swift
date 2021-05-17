@@ -32,7 +32,6 @@ struct Chatbot: View {
             }
         }
     }
-    
 }
 
 struct Chatbot_Previews: PreviewProvider {

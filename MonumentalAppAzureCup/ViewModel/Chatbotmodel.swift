@@ -64,6 +64,13 @@ class ChatBotModel: NSObject, ObservableObject, AVCapturePhotoCaptureDelegate, A
         showingRecordingScreen = false
     }
     
+    func scroll(scroll: ScrollViewProxy) {
+        if self.messages.count > 1{
+            scroll.scrollTo(self.messages[self.messages.count - 1].id)
+        }
+    }
+    
+    
     func sendMessage() {
         guard !message.isEmpty else { return }
         

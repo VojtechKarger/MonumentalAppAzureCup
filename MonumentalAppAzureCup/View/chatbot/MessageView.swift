@@ -23,11 +23,7 @@ struct MessageView: View {
                         Spacer()
                     }
                     Image("Robot")
-                        .resizable()
-                        .scaledToFill()
-                        .frame(width: 50, height: 50, alignment: .center)
-                        .background(Color.ghostWhite)
-                        .clipShape(Circle())
+                        .profilePicture(who: .bot)
                 }
             }
             if let image = message.image {
@@ -37,11 +33,7 @@ struct MessageView: View {
                     .frame(width: UIScreen.main.bounds.width / 2)
                     .clipShape(RoundedRectangle(cornerRadius: 25.0))
                     .id(message.id)
-                    .onAppear(perform: {
-                        if vm.messages.count > 1{
-                            scroll.scrollTo(vm.messages[vm.messages.count - 1].id)
-                        }
-                    })
+                    .onAppear(perform: { vm.scroll(scroll: scroll)} )
                     .onTapGesture {
                         withAnimation{
                             vm.selectedImage = image
@@ -65,23 +57,24 @@ struct MessageView: View {
             }
             
             if let mess = message.message {
-                Text(mess)
-                    .foregroundColor(.primary)
-                    .padding()
-                    .background(GradientView(who: message.who))
-                    .clipShape(RoundedRectangle(cornerRadius: 25.0))
-                    .padding(.trailing,(message.who == .bot) ? 60:0)
-                    .padding(.leading ,(message.who == .user) ? 60:0)
-                    .id(message.id)
-                    .onAppear(perform: {
-                        if vm.messages.count > 1{
-                            scroll.scrollTo(vm.messages[vm.messages.count - 1].id)
-                        }
-                    })
-                    .onTapGesture{
-                        vm.speak(messafe: message.message!)
+                VStack(alignment: .leading) {
+                    if message.who == .bot {
+                        Text("Petr")
+                            .padding(.leading)
+                            .font(.system(size: 10))
                     }
-                
+                    Text(mess)
+                        .foregroundColor(.primary)
+                        .padding()
+                        .background(GradientView(who: message.who))
+                        .clipShape(RoundedRectangle(cornerRadius: 25.0))
+                        .padding(.trailing,(message.who == .bot) ? 60:0)
+                        .padding(.leading ,(message.who == .user) ? 60:0)
+                        .id(message.id)
+                        .onAppear(perform: { vm.scroll(scroll: scroll) })
+                        .onTapGesture{ vm.speak(messafe: message.message!) }
+                    
+                }
             }
             
             if message.who == .bot {
@@ -93,11 +86,7 @@ struct MessageView: View {
                             
                     }
                     Image("user")
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 50, height: 50, alignment: .center)
-                        .background(GradientView(who: .user))
-                        .clipShape(Circle())
+                        .profilePicture(who: .user)
                 }
             }
             
