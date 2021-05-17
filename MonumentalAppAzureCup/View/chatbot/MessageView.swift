@@ -33,7 +33,7 @@ struct MessageView: View {
             if let image = message.image {
                 image
                     .resizable()
-                    .scaledToFill()
+                    .scaledToFit()
                     .clipShape(RoundedRectangle(cornerRadius: 25.0))
                     .frame(maxWidth: UIScreen.main.bounds.width / 2)
                     .onTapGesture {

@@ -9,9 +9,12 @@ import SwiftUI
 
 @main
 struct MonumentalAppAzureCupApp: App {
+    @StateObject var vm = ChatBotModel()
+    @StateObject var am = MicrophoneMonitor(numberOfSamples: 4)
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            Chatbot(am: am)
+                .environmentObject(vm)
         }
     }
 }
