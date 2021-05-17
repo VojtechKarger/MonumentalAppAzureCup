@@ -12,11 +12,7 @@ struct SpeechToTextView: View {
     
     var body: some View {
         ZStack {
-            Button(action: {
-                vm.recognizeMic()
-            }, label: {
-                Text("record")
-        })
+            Button(action: vm.recognizeMic, label: { Text("record") })
             VStack{
                 Divider()
                     .background(Color.azure)
@@ -36,6 +32,17 @@ struct SpeechToTextView: View {
                     
                 }
                 Spacer()
+            }
+        }.frame(width: UIScreen.main.bounds.width ,height: 200)
+        .background(Color.white)
+        .offset(y: vm.showingRecordingScreen ? 0 : 800)
+        .sheet(isPresented: $vm.showing){
+            if vm.takeingPhoto == true {
+                ImagePicker(vm: vm, type: .camera).onAppear(perform: {
+                    vm.loading = false
+                })
+            }else {
+                ImagePicker(vm: vm, type: .photoLibrary)
             }
         }
     }
