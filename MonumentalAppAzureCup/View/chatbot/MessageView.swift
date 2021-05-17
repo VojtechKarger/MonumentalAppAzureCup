@@ -52,6 +52,8 @@ struct MessageView: View {
             if let url = message.url {
                 Link(destination: url) {
                     Text("Here!")
+                        .foregroundColor(.blue)
+                        .underline()
                 }
                 .id(message.id)
                 .onAppear(perform: {
