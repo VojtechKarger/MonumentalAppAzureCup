@@ -146,7 +146,7 @@ class ChatBotModel: NSObject, ObservableObject, AVCapturePhotoCaptureDelegate, A
         
         
         // Line 4. Specify the voice. It is explicitly set to English here, but it will use the device default if not specified.
-        speechUtterance.voice = AVSpeechSynthesisVoice(language: "en-US")
+        speechUtterance.voice = AVSpeechSynthesisVoice(language: "cz")
         
         if speechSynthesizer.isSpeaking {
         print("Speaking")
