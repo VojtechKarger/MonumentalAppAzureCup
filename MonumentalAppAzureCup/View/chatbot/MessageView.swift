@@ -33,12 +33,19 @@ struct MessageView: View {
             if let image = message.image {
                 image
                     .resizable()
-                    .scaledToFit()
+                    .scaledToFill()
+                    .frame(width: UIScreen.main.bounds.width / 2)
                     .clipShape(RoundedRectangle(cornerRadius: 25.0))
-                    .frame(maxWidth: UIScreen.main.bounds.width / 2)
+                    .id(message.id)
+                    .onAppear(perform: {
+                        if vm.messages.count > 1{
+                            scroll.scrollTo(vm.messages[vm.messages.count - 1].id)
+                        }
+                    })
                     .onTapGesture {
                         withAnimation{
                             vm.selectedImage = image
+                            hideKeyboard()
                         }
                     }
             }
@@ -46,6 +53,12 @@ struct MessageView: View {
                 Link(destination: url) {
                     Text("Here!")
                 }
+                .id(message.id)
+                .onAppear(perform: {
+                    if vm.messages.count > 1{
+                        scroll.scrollTo(vm.messages[vm.messages.count - 1].id)
+                    }
+                })
 
             }
             
