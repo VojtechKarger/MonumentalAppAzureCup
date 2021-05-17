@@ -9,7 +9,7 @@ import SwiftUI
 
 struct MessageView: View {
     @ObservedObject var vm: ChatBotModel
-    @EnvironmentObject var am: MicrophoneMonitor
+
     var message: Message
     var scroll: ScrollViewProxy
     
@@ -109,7 +109,7 @@ struct MessageView: View {
 
 struct MessageView_Previews: PreviewProvider {
     static var previews: some View {
-        Chatbot(am: MicrophoneMonitor(numberOfSamples: 3))
+        Chatbot()
             .previewDevice("iPhone 12 Pro Max")
             .environmentObject(ChatBotModel())
 

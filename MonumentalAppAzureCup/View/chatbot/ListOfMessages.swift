@@ -48,7 +48,7 @@ struct ListOfMessages: View {
 
 struct ListOfMessages_Previews: PreviewProvider {
     static var previews: some View {
-        Chatbot(am: MicrophoneMonitor(numberOfSamples: 3))
+        Chatbot()
             .environmentObject(ChatBotModel())
     }
 }

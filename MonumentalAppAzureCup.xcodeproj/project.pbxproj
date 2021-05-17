@@ -25,19 +25,15 @@
 		79929AA826523F2F00DBD76C /* LoadingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79929A9326523F2F00DBD76C /* LoadingScreen.swift */; };
 		79929AA926523F2F00DBD76C /* ExtensionGesture.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79929A9426523F2F00DBD76C /* ExtensionGesture.swift */; };
 		79929AAA26523F2F00DBD76C /* SpeechToTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79929A9626523F2F00DBD76C /* SpeechToTextView.swift */; };
-		79929AAB26523F2F00DBD76C /* VoiceRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79929A9726523F2F00DBD76C /* VoiceRecorder.swift */; };
-		79929AAC26523F2F00DBD76C /* MainMenuCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79929A9926523F2F00DBD76C /* MainMenuCard.swift */; };
-		79929AAD26523F2F00DBD76C /* Obrazek.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79929A9A26523F2F00DBD76C /* Obrazek.swift */; };
-		79929AAE26523F2F00DBD76C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79929A9B26523F2F00DBD76C /* ContentView.swift */; };
 		79929AB326523F3800DBD76C /* Chatbotmodel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79929AB026523F3800DBD76C /* Chatbotmodel.swift */; };
-		79929AB426523F3800DBD76C /* SpeechToTextViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79929AB126523F3800DBD76C /* SpeechToTextViewModel.swift */; };
-		79929AB526523F3800DBD76C /* AudioRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79929AB226523F3800DBD76C /* AudioRecorder.swift */; };
+		79929AB426523F3800DBD76C /* ChatbotModelExtensionsGetingDataFromURLress.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79929AB126523F3800DBD76C /* ChatbotModelExtensionsGetingDataFromURLress.swift */; };
 		79929ABC26523F3D00DBD76C /* ChatbotQuestionModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79929AB726523F3D00DBD76C /* ChatbotQuestionModel.swift */; };
 		79929ABD26523F3D00DBD76C /* ModelNetworking.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79929AB826523F3D00DBD76C /* ModelNetworking.swift */; };
 		79929ABE26523F3D00DBD76C /* NetworkingData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79929AB926523F3D00DBD76C /* NetworkingData.swift */; };
 		79929ABF26523F3D00DBD76C /* ChatbotAnswer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79929ABA26523F3D00DBD76C /* ChatbotAnswer.swift */; };
 		79929AC026523F3D00DBD76C /* ChatbotStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79929ABB26523F3D00DBD76C /* ChatbotStruct.swift */; };
 		79929AC2265274FF00DBD76C /* ListOfMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79929AC1265274FF00DBD76C /* ListOfMessages.swift */; };
+		79929AC4265275AC00DBD76C /* ImageViewChatbot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79929AC3265275AC00DBD76C /* ImageViewChatbot.swift */; };
 		C75F43A1804CCDAD0B927DCD /* Pods_MonumentalAppAzureCup.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B22FD78FD8DEFC6D2A60A2E5 /* Pods_MonumentalAppAzureCup.framework */; };
 /* End PBXBuildFile section */
 
@@ -62,19 +58,15 @@
 		79929A9326523F2F00DBD76C /* LoadingScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingScreen.swift; sourceTree = "<group>"; };
 		79929A9426523F2F00DBD76C /* ExtensionGesture.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExtensionGesture.swift; sourceTree = "<group>"; };
 		79929A9626523F2F00DBD76C /* SpeechToTextView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeechToTextView.swift; sourceTree = "<group>"; };
-		79929A9726523F2F00DBD76C /* VoiceRecorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VoiceRecorder.swift; sourceTree = "<group>"; };
-		79929A9926523F2F00DBD76C /* MainMenuCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainMenuCard.swift; sourceTree = "<group>"; };
-		79929A9A26523F2F00DBD76C /* Obrazek.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Obrazek.swift; sourceTree = "<group>"; };
-		79929A9B26523F2F00DBD76C /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		79929AB026523F3800DBD76C /* Chatbotmodel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Chatbotmodel.swift; sourceTree = "<group>"; };
-		79929AB126523F3800DBD76C /* SpeechToTextViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpeechToTextViewModel.swift; sourceTree = "<group>"; };
-		79929AB226523F3800DBD76C /* AudioRecorder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AudioRecorder.swift; sourceTree = "<group>"; };
+		79929AB126523F3800DBD76C /* ChatbotModelExtensionsGetingDataFromURLress.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatbotModelExtensionsGetingDataFromURLress.swift; sourceTree = "<group>"; };
 		79929AB726523F3D00DBD76C /* ChatbotQuestionModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatbotQuestionModel.swift; sourceTree = "<group>"; };
 		79929AB826523F3D00DBD76C /* ModelNetworking.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelNetworking.swift; sourceTree = "<group>"; };
 		79929AB926523F3D00DBD76C /* NetworkingData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingData.swift; sourceTree = "<group>"; };
 		79929ABA26523F3D00DBD76C /* ChatbotAnswer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatbotAnswer.swift; sourceTree = "<group>"; };
 		79929ABB26523F3D00DBD76C /* ChatbotStruct.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChatbotStruct.swift; sourceTree = "<group>"; };
 		79929AC1265274FF00DBD76C /* ListOfMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfMessages.swift; sourceTree = "<group>"; };
+		79929AC3265275AC00DBD76C /* ImageViewChatbot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewChatbot.swift; sourceTree = "<group>"; };
 		87E4014EE5BD161514DB1905 /* Pods-MonumentalAppAzureCup.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MonumentalAppAzureCup.debug.xcconfig"; path = "Target Support Files/Pods-MonumentalAppAzureCup/Pods-MonumentalAppAzureCup.debug.xcconfig"; sourceTree = "<group>"; };
 		AB6097C75A9B92CE6D3458FE /* Pods-MonumentalAppAzureCup.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MonumentalAppAzureCup.release.xcconfig"; path = "Target Support Files/Pods-MonumentalAppAzureCup/Pods-MonumentalAppAzureCup.release.xcconfig"; sourceTree = "<group>"; };
 		B22FD78FD8DEFC6D2A60A2E5 /* Pods_MonumentalAppAzureCup.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MonumentalAppAzureCup.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -114,9 +106,9 @@
 			isa = PBXGroup;
 			children = (
 				79929A7426523D7E00DBD76C /* MonumentalAppAzureCupApp.swift */,
+				79929A8326523F2F00DBD76C /* View */,
 				79929AB626523F3D00DBD76C /* Model */,
 				79929AAF26523F3800DBD76C /* ViewModel */,
-				79929A8326523F2F00DBD76C /* View */,
 				79929A7826523D8000DBD76C /* Assets.xcassets */,
 				79929A7D26523D8000DBD76C /* Info.plist */,
 				79929A7A26523D8000DBD76C /* Preview Content */,
@@ -139,7 +131,6 @@
 				79929A8826523F2F00DBD76C /* Camera */,
 				79929A8E26523F2F00DBD76C /* HelpersExtensions */,
 				79929A9526523F2F00DBD76C /* VoiceRecorder */,
-				79929A9826523F2F00DBD76C /* prevouriusPrototype */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -148,6 +139,7 @@
 			isa = PBXGroup;
 			children = (
 				79929A8526523F2F00DBD76C /* Chatbot.swift */,
+				79929AC3265275AC00DBD76C /* ImageViewChatbot.swift */,
 				79929AC1265274FF00DBD76C /* ListOfMessages.swift */,
 				79929A8626523F2F00DBD76C /* CustomTextFieldView.swift */,
 				79929A8726523F2F00DBD76C /* MessageView.swift */,
@@ -184,27 +176,15 @@
 			isa = PBXGroup;
 			children = (
 				79929A9626523F2F00DBD76C /* SpeechToTextView.swift */,
-				79929A9726523F2F00DBD76C /* VoiceRecorder.swift */,
 			);
 			path = VoiceRecorder;
-			sourceTree = "<group>";
-		};
-		79929A9826523F2F00DBD76C /* prevouriusPrototype */ = {
-			isa = PBXGroup;
-			children = (
-				79929A9926523F2F00DBD76C /* MainMenuCard.swift */,
-				79929A9A26523F2F00DBD76C /* Obrazek.swift */,
-				79929A9B26523F2F00DBD76C /* ContentView.swift */,
-			);
-			path = prevouriusPrototype;
 			sourceTree = "<group>";
 		};
 		79929AAF26523F3800DBD76C /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
 				79929AB026523F3800DBD76C /* Chatbotmodel.swift */,
-				79929AB126523F3800DBD76C /* SpeechToTextViewModel.swift */,
-				79929AB226523F3800DBD76C /* AudioRecorder.swift */,
+				79929AB126523F3800DBD76C /* ChatbotModelExtensionsGetingDataFromURLress.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -354,7 +334,6 @@
 				79929AC026523F3D00DBD76C /* ChatbotStruct.swift in Sources */,
 				79929AB326523F3800DBD76C /* Chatbotmodel.swift in Sources */,
 				79929A9E26523F2F00DBD76C /* MessageView.swift in Sources */,
-				79929AB526523F3800DBD76C /* AudioRecorder.swift in Sources */,
 				79929AA126523F2F00DBD76C /* CameraView.swift in Sources */,
 				79929AA026523F2F00DBD76C /* CameraPreviews.swift in Sources */,
 				79929AA926523F2F00DBD76C /* ExtensionGesture.swift in Sources */,
@@ -362,16 +341,12 @@
 				79929AA326523F2F00DBD76C /* CameraControls.swift in Sources */,
 				79929AC2265274FF00DBD76C /* ListOfMessages.swift in Sources */,
 				79929ABD26523F3D00DBD76C /* ModelNetworking.swift in Sources */,
-				79929AAE26523F2F00DBD76C /* ContentView.swift in Sources */,
-				79929AAD26523F2F00DBD76C /* Obrazek.swift in Sources */,
 				79929ABF26523F3D00DBD76C /* ChatbotAnswer.swift in Sources */,
 				79929A7526523D7E00DBD76C /* MonumentalAppAzureCupApp.swift in Sources */,
 				79929ABC26523F3D00DBD76C /* ChatbotQuestionModel.swift in Sources */,
-				79929AAB26523F2F00DBD76C /* VoiceRecorder.swift in Sources */,
 				79929AA426523F2F00DBD76C /* CustomColors.swift in Sources */,
 				79929ABE26523F3D00DBD76C /* NetworkingData.swift in Sources */,
-				79929AB426523F3800DBD76C /* SpeechToTextViewModel.swift in Sources */,
-				79929AAC26523F2F00DBD76C /* MainMenuCard.swift in Sources */,
+				79929AB426523F3800DBD76C /* ChatbotModelExtensionsGetingDataFromURLress.swift in Sources */,
 				79929AA526523F2F00DBD76C /* ExtensionView.swift in Sources */,
 				79929AA826523F2F00DBD76C /* LoadingScreen.swift in Sources */,
 				79929AA626523F2F00DBD76C /* CustomTextField.swift in Sources */,
@@ -379,6 +354,7 @@
 				79929AAA26523F2F00DBD76C /* SpeechToTextView.swift in Sources */,
 				79929A9F26523F2F00DBD76C /* ImagePicker.swift in Sources */,
 				79929A9C26523F2F00DBD76C /* Chatbot.swift in Sources */,
+				79929AC4265275AC00DBD76C /* ImageViewChatbot.swift in Sources */,
 				79929A9D26523F2F00DBD76C /* CustomTextFieldView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

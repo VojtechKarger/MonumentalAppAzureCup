@@ -10,7 +10,6 @@ import SwiftUI
 struct CustomTextField: View {
     @ObservedObject var vm: ChatBotModel
     @Binding var textfieldIsActive: Bool
-    @EnvironmentObject var am: MicrophoneMonitor
     
     var body: some View {
         ZStack {
