@@ -64,8 +64,8 @@ struct MessageView: View {
                             .font(.system(size: 10))
                     }
                     Text(mess)
-                        .foregroundColor(.primary)
                         .padding()
+                        .foregroundColor((message.who == .user) ? .white : .primary)
                         .background(GradientView(who: message.who))
                         .clipShape(RoundedRectangle(cornerRadius: 25.0))
                         .padding(.trailing,(message.who == .bot) ? 60:0)
@@ -73,10 +73,10 @@ struct MessageView: View {
                         .id(message.id)
                         .onAppear(perform: { vm.scroll(scroll: scroll) })
                         .onTapGesture{
-//                            vm.speak(messafe: message.message!)
-                            DispatchQueue.global(qos: .userInitiated).async {
-                                vm.synthesisToSpeaker(messageToSpeak: mess)
-                            }
+                            vm.speak(messafe: message.message!)
+//                            DispatchQueue.global(qos: .userInitiated).async {
+//                                vm.synthesisToSpeaker(messageToSpeak: mess)
+//                            }
                         }
                     
                 }

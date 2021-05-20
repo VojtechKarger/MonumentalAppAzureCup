@@ -12,6 +12,7 @@ import SwiftUI
 extension ChatBotModel {
     
     func synthesisToSpeaker(messageToSpeak: String) {
+        
         let sub = NetworkingData.subSpeechToText
         let region = NetworkingData.regionSpeechToText
         
