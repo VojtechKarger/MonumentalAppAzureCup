@@ -20,7 +20,7 @@ struct CustomTextField: View {
                             .resizable()
                             .scaledToFit()
                     }
-                    .animation(.easeInOut)
+                    .animation(Animation.easeInOut)
                     .buttonStyle(MySideBarButtonStyle())
                     .frame(width: 65, height: 65)
                     .offset(x: 10, y: -70)
@@ -32,7 +32,7 @@ struct CustomTextField: View {
                             .resizable()
                             .scaledToFit()
                     }
-                    .animation(.easeInOut.delay(0.2))
+                    .animation(Animation.easeInOut.delay(0.2))
                     .buttonStyle(MySideBarButtonStyle())
                     .frame(width: 65, height: 65)
                     .offset(x: 10, y: -150)
@@ -44,7 +44,7 @@ struct CustomTextField: View {
                             .resizable()
                             .scaledToFit()
                     }
-                    .animation(.easeInOut.delay(0.5))
+                    .animation(Animation.easeInOut.delay(0.5))
                     .buttonStyle(MySideBarButtonStyle())
                     .frame(width: 65, height: 65)
                     .offset(x: 10, y: -230)
