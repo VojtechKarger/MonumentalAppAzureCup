@@ -14,7 +14,7 @@ struct ImageViewChatbot: View {
     
     var body: some View {
         ZStack {
-            Color.ghostWhite.opacity(0.9)
+            Color.ghostWhite.opacity(0.91)
                 .ignoresSafeArea()
             img
                 .resizable()
