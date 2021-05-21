@@ -15,6 +15,7 @@ extension Image {
         self
             .resizable()
             .scaledToFill()
+            .padding((who == .bot) ? 10 : 0)
             .frame(width: 50, height: 50, alignment: .center)
             .background(GradientView(who: who))
             .clipShape(Circle())
