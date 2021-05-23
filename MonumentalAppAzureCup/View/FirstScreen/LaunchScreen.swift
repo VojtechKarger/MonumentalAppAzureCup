@@ -16,17 +16,21 @@ struct LaunchScreen: View {
     var body: some View {
         ZStack{
             Chatbot()
-            let someAnimation = Animation.linear(duration: 1).delay(3)
-            (launch ? Color.clear.ignoresSafeArea() : Color.firstBG.ignoresSafeArea())
+            Color.firstBG.ignoresSafeArea()
+                .opacity(launch ? 0 : 1)
+                .animation(.easeInOut.delay(4))
+            
             VStack{
                 Color.firstBG.ignoresSafeArea()
                     .frame(height: 50)
                     .offset(x: launch ? 0 : -UIScreen.main.bounds.width)
                     .opacity(!launch ? 0 : 1)
-                    .animation(someAnimation)
+                    .animation(.easeInOut)
                 Spacer()
             }
-            
+            if showingGuide {
+                WelcomeView(firstTime: $firstTime, dismiss: $showingGuide)
+            }
             VStack{
                 HStack {
                     LOGO()
@@ -43,21 +47,24 @@ struct LaunchScreen: View {
                 }
             }
             
-            if showingGuide {
-                WelcomeView(dismiss: $showingGuide)
-            }
+            
             
             
         }.onAppear(perform: {
             
             //Just for testing delete than...
-            firstTime = true
-            
-            showingGuide = firstTime
-            
+//            firstTime = true
+
             withAnimation(Animation.easeInOut(duration: 3).delay(1)) {
                 launch.toggle()
 
+            }
+            DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 4){
+                //testing
+                showingGuide.toggle()
+                
+                //production
+                //showingGuide = firstTime
             }
         })
         

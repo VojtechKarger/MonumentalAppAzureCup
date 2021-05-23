@@ -48,7 +48,7 @@ struct MessageView: View {
             if let url = message.url {
                 Link(destination: url) {
                     Text("Here!")
-                        .foregroundColor(.blue)
+                        .foregroundColor(.azure)
                         .underline()
                 }
                 .id(message.id)
@@ -61,17 +61,12 @@ struct MessageView: View {
             }
             
             if let mess = message.message {
-                VStack(alignment: .leading) {
-                    if message.who == .bot {
-                        Text("Petr")
-                            .padding(.leading)
-                            .font(.system(size: 10))
-                    }
+                ZStack(alignment: .leading) {
                     Text(mess)
-                        .padding()
+                        .padding(13)
                         .foregroundColor((message.who == .user) ? .white : .primary)
                         .background(GradientView(who: message.who))
-                        .clipShape(RoundedRectangle(cornerRadius: 25.0))
+                        .clipShape(RoundedRectangle(cornerRadius: 22.0))
                         .padding(.trailing,(message.who == .bot) ? 60:0)
                         .padding(.leading ,(message.who == .user) ? 60:0)
                         .id(message.id)

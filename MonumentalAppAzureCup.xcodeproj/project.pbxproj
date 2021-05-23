@@ -98,6 +98,7 @@
 				798C9CE4265A471A00193E23 /* WelcomeView.swift */,
 				79E9B22926590F400017C7AE /* LaunchScreen.swift */,
 				798C9CE8265A48A500193E23 /* ProfilePicPicker.swift */,
+				79E9B227265909970017C7AE /* LOGO.swift */,
 			);
 			path = FirstScreen;
 			sourceTree = "<group>";
@@ -162,7 +163,6 @@
 				79929AC1265274FF00DBD76C /* ListOfMessages.swift */,
 				79929A8626523F2F00DBD76C /* CustomTextFieldView.swift */,
 				79929A8726523F2F00DBD76C /* MessageView.swift */,
-				79E9B227265909970017C7AE /* LOGO.swift */,
 			);
 			path = chatbot;
 			sourceTree = "<group>";

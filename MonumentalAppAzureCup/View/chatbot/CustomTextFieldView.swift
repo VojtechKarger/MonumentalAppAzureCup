@@ -68,8 +68,9 @@ struct CustomTextField: View {
                     
                 }.frame(width: 30, height: 30, alignment: .center)
 
-                TextField("Type text here...", text: $vm.message, onCommit: vm.sendMessage)
+                TextField("Type text here...", text: $vm.message , onCommit: vm.sendMessage)
                     .underlineText(color: .azure)
+                    .disableAutocorrection(true)
                 .onTapGesture {
                     withAnimation{
                         textfieldIsActive = true
@@ -81,6 +82,7 @@ struct CustomTextField: View {
                     Image(systemName: "paperplane.fill")
                         .resizable()
                         .scaledToFit()
+                        .foregroundColor(.azure)
                         .frame(width: 28, height: 28)
                         .padding(2)
                 })

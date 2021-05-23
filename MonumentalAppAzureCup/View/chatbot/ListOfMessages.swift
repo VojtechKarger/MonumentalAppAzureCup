@@ -13,7 +13,7 @@ struct ListOfMessages: View {
     var body: some View {
         ZStack {
             Color.firstBG
-            ScrollView {
+            ScrollView(.vertical, showsIndicators: false){
                 ScrollViewReader { scroll in
                     Rectangle()
                         .fill(Color.clear)

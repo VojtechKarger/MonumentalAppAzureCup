@@ -8,7 +8,7 @@
 import SwiftUI
 
 enum StateNow {
-    case loading, first, second, hide
+    case loading, first, second, hide, confirmPic
 }
 
 
@@ -16,6 +16,8 @@ struct WelcomeView: View {
     let screen = UIScreen.main.bounds
     
     @State private var btnText = "Next"
+    
+    @Binding var firstTime: Bool
     
     @State private var currentState: StateNow = .loading
     
@@ -50,8 +52,9 @@ struct WelcomeView: View {
                         .animation(.spring(response: 1.5, dampingFraction: 0.8, blendDuration: 100.0))
                     ZStack{
                         MessageBubble(message: "Hello, I am Peter \n And I will be your Prague guide.").offset(y: -screen.height * (middle - 1))
-                        MessageBubble(message: "I can ansewr your messages or even to your images.").offset(y: -screen.height * (middle - 2))
+                        MessageBubble(message: "I can ansewer your messages or even to your images.").offset(y: -screen.height * (middle - 2))
                         MessageBubble(message: "Now please chose your profile picture.").offset(y: -screen.height * (middle - 3))
+                        ProfilePicConfirm().offset(y: -screen.height * (middle - 4))
                     }
                 }
 
@@ -66,20 +69,25 @@ struct WelcomeView: View {
                     Text(btnText)
                 }).buttonStyle(NextButton())
                 .padding(.bottom)
+                .offset(y: (middle == 0) ? screen.height / 2 : 0)
+                .animation(.spring(response: 1.5, dampingFraction: 0.8, blendDuration: 100.0))
             }
         }.onAppear(perform: {
-            animation()
+            withAnimation(.spring(response: 1.5, dampingFraction: 0.8, blendDuration: 100.0).delay(4)){
+                animation()
+            }
         })
-        .sheet(isPresented: $presenting,onDismiss: { dismiss = false } , content: {
+        .sheet(isPresented: $presenting, content: {
             ImagePicker2(image: $image)
         })
+        .transition(.opacity)
     }
     
     
     
     
     func animation() {
-        if middle < 3 {
+        if middle < 4 {
             withAnimation(.spring(response: 1.5, dampingFraction: 0.8, blendDuration: 100.0)){
                 middle += 1
             }
@@ -108,18 +116,25 @@ struct WelcomeView: View {
                 currentState = .hide
                 btnText = "Choose"
             case .hide:
-                withAnimation(nil){
-                    animation1 = -15
-                    animation2 = 15
-                    animation3 = 15
-                    animation4 = 0
-                    currentState = .loading
-                    btnText = "Next"
-                }
+                currentState = .confirmPic
                 DispatchQueue.main.async {
                     presenting = true
                 }
+                btnText = "Confirm"
                 
+            case .confirmPic:
+                btnText = "Next"
+                animation1 = -15
+                animation2 = 15
+                animation3 = 15
+                animation4 = 0
+                currentState = .loading
+                DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1){
+                    withAnimation{
+                        dismiss.toggle()
+                        firstTime.toggle()
+                    }
+                }
             }
             
         }
@@ -128,7 +143,7 @@ struct WelcomeView: View {
 
 struct WelcomeView_Previews: PreviewProvider {
     static var previews: some View {
-        WelcomeView(dismiss: .constant(false))
+        WelcomeView(firstTime: .constant(false), dismiss: .constant(false))
     }
 }
 
@@ -214,5 +229,24 @@ struct MessageBubble: View {
                 .padding(40)
         }.frame(width: screen.width / 1.5, height: screen.width / 2, alignment: .center)
         .padding(.bottom, screen.width / 7)
+    }
+}
+
+
+struct ProfilePicConfirm: View {
+    let screen = UIScreen.main.bounds
+    @AppStorage("image") var image: Data = Data(count: 0)
+    
+    var body: some View {
+        ZStack{
+            Circle()
+                .fill(Color.azure2)
+                .frame(width: screen.width / 2, height: screen.width / 2, alignment: .center)
+            Image(uiImage: UIImage(data: image) ?? UIImage(named: "user")!)
+                .resizable()
+                .scaledToFill()
+                .frame(width: screen.width / 2 - 15, height: screen.width / 2 - 15, alignment: .center)
+                .clipShape(Circle())
+        }
     }
 }
