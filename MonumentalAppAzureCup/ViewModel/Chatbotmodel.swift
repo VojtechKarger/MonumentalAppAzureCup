@@ -18,7 +18,9 @@ import MicrosoftCognitiveServicesSpeech
 class ChatBotModel: NSObject, ObservableObject, AVCapturePhotoCaptureDelegate, AVCaptureVideoDataOutputSampleBufferDelegate {
     var recognisedMic = false
     
-    @Published var messages: [Message] = [Message(who: .user, message: "ahoj"),Message(who: .bot, message: "ahoj"),Message(who: .user, image: Image("pozadiMainScreen")),Message(who: .bot, message: "Tynsky Chram"),Message(who: .bot, image: Image("bgImage1")), Message(who: .user, message: "instagram"),Message(who: .bot, url: URL(string: "https://www.instagram.com")!), Message(who: .user, message: "google"),Message(who: .bot, url: URL(string: "https://www.google.cz")!)]
+    @Published var messages: [Message] = [
+//        Message(who: .user, message: "ahoj"),Message(who: .bot, message: "ahoj"),Message(who: .user, image: Image("pozadiMainScreen")),Message(who: .bot, message: "Tynsky Chram"),Message(who: .bot, image: Image("bgImage1")), Message(who: .user, message: "instagram"),Message(who: .bot, url: URL(string: "https://www.instagram.com")!), Message(who: .user, message: "google"),Message(who: .bot, url: URL(string: "https://www.google.cz")!)
+    ]
     
     @Published var picData = Data(count: 0)
     @Published var isTaken = false

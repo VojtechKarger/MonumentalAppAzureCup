@@ -27,8 +27,6 @@ struct Chatbot: View {
                     if let img = vm.selectedImage {
                         ImageViewChatbot(img: img)
                     }
-                    
-                    
                 }
             }
         }
