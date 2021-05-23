@@ -35,7 +35,7 @@ struct CustomTextField: View {
                     .animation(Animation.easeInOut.delay(0.2))
                     .buttonStyle(MySideBarButtonStyle())
                     .frame(width: 65, height: 65)
-                    .offset(x: 10, y: -150)
+                    .offset(x: 90, y: -70)
                     .isHidden(textfieldIsActive, remove: true)
                     
                     
@@ -47,7 +47,7 @@ struct CustomTextField: View {
                     .animation(Animation.easeInOut.delay(0.5))
                     .buttonStyle(MySideBarButtonStyle())
                     .frame(width: 65, height: 65)
-                    .offset(x: 10, y: -230)
+                    .offset(x: 170, y: -70)
                     .isHidden(textfieldIsActive, remove: true)
                     
                     
@@ -81,7 +81,6 @@ struct CustomTextField: View {
                     Image(systemName: "paperplane.fill")
                         .resizable()
                         .scaledToFit()
-                        .foregroundColor(.azure)
                         .frame(width: 28, height: 28)
                         .padding(2)
                 })

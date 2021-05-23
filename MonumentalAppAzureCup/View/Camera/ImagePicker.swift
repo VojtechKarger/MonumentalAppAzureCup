@@ -13,7 +13,7 @@ import SwiftUI
 struct ImagePicker: UIViewControllerRepresentable {
     @Environment(\.presentationMode) var presentationMode
     @ObservedObject var vm: ChatBotModel
-    
+
     var type: UIImagePickerController.SourceType
     
     class Coordinator: NSObject, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
@@ -27,6 +27,7 @@ struct ImagePicker: UIViewControllerRepresentable {
             if let uiImage = info[.originalImage] as? UIImage {
                 parent.vm.picData = uiImage.pngData()!
                 parent.vm.sendImage()
+
             }
 
             parent.presentationMode.wrappedValue.dismiss()

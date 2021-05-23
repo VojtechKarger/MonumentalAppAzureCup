@@ -13,11 +13,9 @@ struct MySideBarButtonStyle: ButtonStyle {
         configuration.label
             .frame(width: 60, height: 60)
             .padding(5)
-            .background(Color.firstBG)
-            .clipShape(Circle())
-            .overlay(Circle()
-                        .stroke(Color.azure, lineWidth: 1  ))
+            .background(GradientView(who: .user))
+            .clipShape(RoundedRectangle(cornerRadius: 15))
             .scaleEffect(!configuration.isPressed ? 1 : 0.8)
-            .transition(.move(edge: .leading))
+            .transition(.scale)
     }
 }

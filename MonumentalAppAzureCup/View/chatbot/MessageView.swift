@@ -13,6 +13,10 @@ struct MessageView: View {
     var message: Message
     var scroll: ScrollViewProxy
     
+    @AppStorage("image") var image: Data = UIImage(named: "user")!.pngData()!
+    
+    
+    
     var body: some View {
         HStack{
             if message.who == .user{
@@ -22,7 +26,7 @@ struct MessageView: View {
                     if message.image != nil {
                         Spacer()
                     }
-                    Image("Robot")
+                    Image("Bot")
                         .profilePicture(who: .bot)
                 }
             }
@@ -90,7 +94,9 @@ struct MessageView: View {
                         Spacer()
                             
                     }
-                    Image("user")
+                    let img = UIImage(data: image)!
+                    
+                    Image(uiImage: img)
                         .profilePicture(who: .user)
                 }
             }

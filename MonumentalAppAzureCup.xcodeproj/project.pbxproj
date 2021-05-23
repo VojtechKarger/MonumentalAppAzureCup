@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		793F08AB2652CBC0003647CC /* TextToSpeech.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793F08AA2652CBC0003647CC /* TextToSpeech.swift */; };
+		798C9CE5265A471A00193E23 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798C9CE4265A471A00193E23 /* WelcomeView.swift */; };
+		798C9CE9265A48A500193E23 /* ProfilePicPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798C9CE8265A48A500193E23 /* ProfilePicPicker.swift */; };
 		79929A7526523D7E00DBD76C /* MonumentalAppAzureCupApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79929A7426523D7E00DBD76C /* MonumentalAppAzureCupApp.swift */; };
 		79929A7926523D8000DBD76C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79929A7826523D8000DBD76C /* Assets.xcassets */; };
 		79929A7C26523D8000DBD76C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79929A7B26523D8000DBD76C /* Preview Assets.xcassets */; };
@@ -34,11 +36,15 @@
 		79929AC82652789F00DBD76C /* ChatbotSpeechToText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79929AC72652789F00DBD76C /* ChatbotSpeechToText.swift */; };
 		79929ACA26527E0100DBD76C /* ProfileImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79929AC926527E0100DBD76C /* ProfileImage.swift */; };
 		79CC2D8D265841E4005E0262 /* SideBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CC2D8C265841E4005E0262 /* SideBarButton.swift */; };
+		79E9B228265909970017C7AE /* LOGO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E9B227265909970017C7AE /* LOGO.swift */; };
+		79E9B22A26590F400017C7AE /* LaunchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E9B22926590F400017C7AE /* LaunchScreen.swift */; };
 		C75F43A1804CCDAD0B927DCD /* Pods_MonumentalAppAzureCup.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B22FD78FD8DEFC6D2A60A2E5 /* Pods_MonumentalAppAzureCup.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		793F08AA2652CBC0003647CC /* TextToSpeech.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextToSpeech.swift; sourceTree = "<group>"; };
+		798C9CE4265A471A00193E23 /* WelcomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
+		798C9CE8265A48A500193E23 /* ProfilePicPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePicPicker.swift; sourceTree = "<group>"; };
 		79929A7126523D7E00DBD76C /* MonumentalAppAzureCup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MonumentalAppAzureCup.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79929A7426523D7E00DBD76C /* MonumentalAppAzureCupApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MonumentalAppAzureCupApp.swift; sourceTree = "<group>"; };
 		79929A7826523D8000DBD76C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -67,6 +73,8 @@
 		79929AC72652789F00DBD76C /* ChatbotSpeechToText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatbotSpeechToText.swift; sourceTree = "<group>"; };
 		79929AC926527E0100DBD76C /* ProfileImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImage.swift; sourceTree = "<group>"; };
 		79CC2D8C265841E4005E0262 /* SideBarButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideBarButton.swift; sourceTree = "<group>"; };
+		79E9B227265909970017C7AE /* LOGO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LOGO.swift; sourceTree = "<group>"; };
+		79E9B22926590F400017C7AE /* LaunchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreen.swift; sourceTree = "<group>"; };
 		87E4014EE5BD161514DB1905 /* Pods-MonumentalAppAzureCup.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MonumentalAppAzureCup.debug.xcconfig"; path = "Target Support Files/Pods-MonumentalAppAzureCup/Pods-MonumentalAppAzureCup.debug.xcconfig"; sourceTree = "<group>"; };
 		AB6097C75A9B92CE6D3458FE /* Pods-MonumentalAppAzureCup.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MonumentalAppAzureCup.release.xcconfig"; path = "Target Support Files/Pods-MonumentalAppAzureCup/Pods-MonumentalAppAzureCup.release.xcconfig"; sourceTree = "<group>"; };
 		B22FD78FD8DEFC6D2A60A2E5 /* Pods_MonumentalAppAzureCup.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MonumentalAppAzureCup.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -84,6 +92,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		798C9CEA265A511300193E23 /* FirstScreen */ = {
+			isa = PBXGroup;
+			children = (
+				798C9CE4265A471A00193E23 /* WelcomeView.swift */,
+				79E9B22926590F400017C7AE /* LaunchScreen.swift */,
+				798C9CE8265A48A500193E23 /* ProfilePicPicker.swift */,
+			);
+			path = FirstScreen;
+			sourceTree = "<group>";
+		};
 		79929A6826523D7E00DBD76C = {
 			isa = PBXGroup;
 			children = (
@@ -127,6 +145,7 @@
 		79929A8326523F2F00DBD76C /* View */ = {
 			isa = PBXGroup;
 			children = (
+				798C9CEA265A511300193E23 /* FirstScreen */,
 				79929A8426523F2F00DBD76C /* chatbot */,
 				79929A8826523F2F00DBD76C /* Camera */,
 				79929A8E26523F2F00DBD76C /* HelpersExtensions */,
@@ -143,6 +162,7 @@
 				79929AC1265274FF00DBD76C /* ListOfMessages.swift */,
 				79929A8626523F2F00DBD76C /* CustomTextFieldView.swift */,
 				79929A8726523F2F00DBD76C /* MessageView.swift */,
+				79E9B227265909970017C7AE /* LOGO.swift */,
 			);
 			path = chatbot;
 			sourceTree = "<group>";
@@ -342,6 +362,7 @@
 				79929ABF26523F3D00DBD76C /* ChatbotAnswer.swift in Sources */,
 				79929A7526523D7E00DBD76C /* MonumentalAppAzureCupApp.swift in Sources */,
 				79929ABC26523F3D00DBD76C /* ChatbotQuestionModel.swift in Sources */,
+				79E9B22A26590F400017C7AE /* LaunchScreen.swift in Sources */,
 				79929AA426523F2F00DBD76C /* CustomColors.swift in Sources */,
 				79929ABE26523F3D00DBD76C /* NetworkingData.swift in Sources */,
 				79929AB426523F3800DBD76C /* ChatbotModelExtensionsGetingDataFromURLress.swift in Sources */,
@@ -351,11 +372,14 @@
 				79929AA626523F2F00DBD76C /* CustomTextField.swift in Sources */,
 				79929AAA26523F2F00DBD76C /* SpeechToTextView.swift in Sources */,
 				79CC2D8D265841E4005E0262 /* SideBarButton.swift in Sources */,
+				79E9B228265909970017C7AE /* LOGO.swift in Sources */,
 				79929A9F26523F2F00DBD76C /* ImagePicker.swift in Sources */,
 				79929A9C26523F2F00DBD76C /* Chatbot.swift in Sources */,
 				79929AC4265275AC00DBD76C /* ImageViewChatbot.swift in Sources */,
 				79929AC82652789F00DBD76C /* ChatbotSpeechToText.swift in Sources */,
 				79929A9D26523F2F00DBD76C /* CustomTextFieldView.swift in Sources */,
+				798C9CE9265A48A500193E23 /* ProfilePicPicker.swift in Sources */,
+				798C9CE5265A471A00193E23 /* WelcomeView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -13,7 +13,7 @@ struct MonumentalAppAzureCupApp: App {
    
     var body: some Scene {
         WindowGroup {
-            Chatbot()
+            LaunchScreen()
                 .environmentObject(vm)
         }
     }

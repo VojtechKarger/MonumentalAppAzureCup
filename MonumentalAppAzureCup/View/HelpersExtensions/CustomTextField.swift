@@ -11,7 +11,7 @@ import SwiftUI
 extension TextField {
     
     func underlineText(color: Color) -> some View {
-        self.modifier(UnderLinedText(color: color))
+        self.modifier(UnderLinedText(color: color)).cornerRadius(10)
     }
 }
 
@@ -19,13 +19,18 @@ struct UnderLinedText: ViewModifier {
     var color: Color
     
     func body(content: Content) -> some View {
-
+        ZStack {
             content
-                .padding(10)
-                .overlay(
+                .padding(.horizontal , 10)
+
+            GradientView(who: .user)
+                .mask(
                     RoundedRectangle(cornerRadius: 10)
-                        .stroke(color ,lineWidth: 1)
+                        .stroke(color ,lineWidth: 3)
                 )
+                .frame(height: 50, alignment: .center)
+
+        }
 
         
     }

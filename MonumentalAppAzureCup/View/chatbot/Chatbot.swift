@@ -15,6 +15,7 @@ struct Chatbot: View {
         LoadingView(isShowing: $vm.loading){
             GeometryReader{ geo in
                 ZStack(alignment: .bottom){
+                    Color.firstBG.ignoresSafeArea()
                     VStack {
                         ListOfMessages(textfieldIsActive: $textfieldIsActive)
 
