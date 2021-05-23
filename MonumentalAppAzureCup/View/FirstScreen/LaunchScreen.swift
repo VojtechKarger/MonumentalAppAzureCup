@@ -61,10 +61,10 @@ struct LaunchScreen: View {
             }
             DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 4){
                 //testing
-                showingGuide.toggle()
+                //showingGuide.toggle()
                 
                 //production
-                //showingGuide = firstTime
+                showingGuide = firstTime
             }
         })
         
