@@ -36,10 +36,7 @@ $ swift --version
 Pokud nemáte verzi 5.3.2 tak si ho aktualizujte.
 
 #### Simulátor M1
-
-
-
-
+Vzhledem k tomu že naše aplikace využívá microsoft knihovnu která nepodporuje ARM architekturu nejde tato aplikace/projekt spustit na simulátoru M1 maců. Na fyzickém zařízení to ale funguje normálně tudíž doporučuji to.
 
 ## Využité technologie
 * aplikace
