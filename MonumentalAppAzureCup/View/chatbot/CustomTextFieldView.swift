@@ -11,10 +11,19 @@ struct CustomTextField: View {
     @ObservedObject var vm: ChatBotModel
     @Binding var textfieldIsActive: Bool
     
+    var scroll: ScrollViewProxy
+    
     var body: some View {
         ZStack {
             HStack {
                 ZStack {
+                    
+                    if vm.chatbotTyping {
+                        ActivityIndicatorChatBot()
+                            .frame(width: 70, height: 34, alignment: .center)
+                            .offset(x: 10,y: -40)
+                    }
+                    
                     Button(action: { vm.takeingPhoto = false; textfieldIsActive = true ; vm.hide() ; vm.showing.toggle() ; print("aaaaaa") }) {
                         Image("Gallery")
                             .resizable()
@@ -68,7 +77,7 @@ struct CustomTextField: View {
                     
                 }.frame(width: 30, height: 30, alignment: .center)
 
-                TextField("Type text here...", text: $vm.message , onCommit: vm.sendMessage)
+                TextField("Type text here...", text: $vm.message , onCommit: sendMessage)
                     .underlineText(color: .azure)
                     .disableAutocorrection(true)
                 .onTapGesture {
@@ -78,7 +87,7 @@ struct CustomTextField: View {
                     }
                 }
                 
-                Button(action: vm.sendMessage , label: {
+                Button(action: sendMessage , label: {
                     Image(systemName: "paperplane.fill")
                         .resizable()
                         .scaledToFit()
@@ -111,6 +120,13 @@ struct CustomTextField: View {
         }
     }
     
+    
+    func sendMessage() {
+        vm.sendMessage { id in
+            scroll.scrollTo(id, anchor: .bottom)
+        }
+    }
+    
     func openCamera(){
         print("tapped")
         vm.loading = true
@@ -127,7 +143,7 @@ struct CustomTextField: View {
 
 struct CustomTextField_Previews: PreviewProvider {
     static var previews: some View {
-        CustomTextField(vm: ChatBotModel(), textfieldIsActive: .constant(true))
+        Chatbot()
             .previewDevice("iPhone 12 Pro Max")
     }
 }

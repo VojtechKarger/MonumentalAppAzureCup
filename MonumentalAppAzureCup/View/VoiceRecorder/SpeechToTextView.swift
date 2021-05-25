@@ -12,7 +12,8 @@ struct SpeechToTextView: View {
     
     var body: some View {
         ZStack {
-            Button(action: vm.recognizeMic, label: { Text("record") })
+            Button(action: vm.recognizeMic, label: { Text("").frame(width: 50, height: 50, alignment: .center) })
+                .buttonStyle(RecordButton())
             VStack{
                 Divider()
                     .background(Color.azure)

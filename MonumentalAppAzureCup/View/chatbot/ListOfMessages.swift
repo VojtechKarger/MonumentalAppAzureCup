@@ -10,25 +10,26 @@ import SwiftUI
 struct ListOfMessages: View {
     @EnvironmentObject var vm: ChatBotModel
     @Binding var textfieldIsActive: Bool
+    var scroll: ScrollViewProxy
     var body: some View {
         ZStack {
             Color.firstBG
             ScrollView(.vertical, showsIndicators: false){
-                ScrollViewReader { scroll in
-                    Rectangle()
-                        .fill(Color.clear)
-                        .frame(height: 50, alignment: .center)
-                    
-                    ForEach(vm.messages){ message in
-                        MessageView(vm: vm, message: message, scroll: scroll)
-                    }
-                    if vm.buttonText != "" {
-                        Button(action: vm.yesPlease, label: {
-                            Text(vm.buttonText ?? "Yes please!")
-                        })
-                    }
+            
+                Rectangle()
+                    .fill(Color.clear)
+                    .frame(height: 50, alignment: .center)
+                
+                ForEach(vm.messages){ message in
+                    MessageView(vm: vm, message: message, scroll: scroll)
+                }
+                if vm.buttonText != "" {
+                    Button(action: vm.yesPlease, label: {
+                        Text(vm.buttonText ?? "Yes please!")
+                    })
                 }
             }
+        
         }
         .blur(radius: textfieldIsActive ? 0 : 4)
         .onTapGesture {

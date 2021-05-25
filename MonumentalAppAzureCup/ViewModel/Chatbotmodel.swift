@@ -43,6 +43,12 @@ class ChatBotModel: NSObject, ObservableObject, AVCapturePhotoCaptureDelegate, A
     
     @Published var betterMessage: AdvancedMessage?
     
+    
+    
+    @Published var chatbotTyping: Bool = false {
+        didSet { print(chatbotTyping) }
+    }
+    
     //comunication with chatbot
     var QnaAId: Int?
     var previousUserQuery: String?
@@ -74,7 +80,7 @@ class ChatBotModel: NSObject, ObservableObject, AVCapturePhotoCaptureDelegate, A
     }
     
     
-    func sendMessage() {
+    func sendMessage(completion: @escaping (UUID?)-> Void) {
         guard !message.isEmpty else { return }
         
         let messageObject = Message(who: .user, message: message)
@@ -82,8 +88,18 @@ class ChatBotModel: NSObject, ObservableObject, AVCapturePhotoCaptureDelegate, A
             messages.append(messageObject)
         }
         
+        
+        chatbotTyping = true
         //MARK: Sending message to bot
-        sendMessageToAzureBot(input: message)
+        sendMessageToAzureBot(input: message) { mess in
+            guard mess != nil else{ return }
+            
+            self.chatbotTyping = false
+            withAnimation {
+                self.messages.append(mess!)
+            }
+            completion(mess?.id)
+        }
         
         message = String()
     }
@@ -116,7 +132,14 @@ class ChatBotModel: NSObject, ObservableObject, AVCapturePhotoCaptureDelegate, A
         
             print(decoded)
             
-            self.sendMessageToAzureBot(input: decoded.predictions[0].tagName)
+            self.sendMessageToAzureBot(input: decoded.predictions[0].tagName){ mess in
+                guard mess != nil else{ return }
+                self.chatbotTyping = true
+                withAnimation {
+                    self.messages.append(mess!)
+                    self.chatbotTyping = false
+                }
+            }
             
         }.resume()
         

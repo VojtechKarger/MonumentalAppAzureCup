@@ -13,24 +13,27 @@ struct Chatbot: View {
     
     var body: some View {
         LoadingView(isShowing: $vm.loading){
-            GeometryReader{ geo in
-                ZStack(alignment: .bottom){
-                    Color.firstBG.ignoresSafeArea()
-                    VStack {
-                        ListOfMessages(textfieldIsActive: $textfieldIsActive)
+            ScrollViewReader { scroll in
+                GeometryReader{ geo in
+                    ZStack(alignment: .bottom){
+                        Color.firstBG.ignoresSafeArea()
+                        VStack {
+                            ListOfMessages(textfieldIsActive: $textfieldIsActive, scroll: scroll)
 
-                        CustomTextField(vm: vm, textfieldIsActive: $textfieldIsActive)
-                    }.offset(y: !vm.showingRecordingScreen ? 0 : -200)
-                    
-                    SpeechToTextView()
-                    
-                    if let img = vm.selectedImage {
-                        ImageViewChatbot(img: img)
+                            CustomTextField(vm: vm, textfieldIsActive: $textfieldIsActive, scroll: scroll)
+                        }.offset(y: !vm.showingRecordingScreen ? 0 : -200)
+                        
+                        SpeechToTextView()
+                        
+                        if let img = vm.selectedImage {
+                            ImageViewChatbot(img: img)
+                        }
                     }
                 }
             }
         }
     }
+
 }
 
 struct Chatbot_Previews: PreviewProvider {

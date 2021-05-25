@@ -15,6 +15,8 @@ enum StateNow {
 struct WelcomeView: View {
     let screen = UIScreen.main.bounds
     
+    @EnvironmentObject var vm: ChatBotModel
+
     @State private var btnText = "Next"
     
     @Binding var firstTime: Bool
@@ -133,6 +135,13 @@ struct WelcomeView: View {
                     withAnimation{
                         dismiss.toggle()
                         firstTime.toggle()
+                        vm.chatbotTyping = true
+                        
+                        DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2.2) {
+                            vm.messages.append(Message(who: .bot, message: "Hello What can I help you with?"))
+                            vm.chatbotTyping = false
+                        }
+                        
                     }
                 }
             }
@@ -162,8 +171,6 @@ struct NextButton: ButtonStyle {
 
 
 struct Bubble: Shape {
-    
-    
     func path(in rect: CGRect) -> Path {
         var path = Path()
         let width = rect.size.width
@@ -194,7 +201,6 @@ struct My: Shape {
             animation4 = newValue.second.second.second
         }
     }
-    
     func path(in rect: CGRect) -> Path {
         var path = Path()
         let width = rect.size.width
@@ -215,6 +221,7 @@ struct My: Shape {
 
 
 struct MessageBubble: View {
+    
     var message: String
     let screen = UIScreen.main.bounds
 
@@ -235,6 +242,7 @@ struct MessageBubble: View {
 
 struct ProfilePicConfirm: View {
     let screen = UIScreen.main.bounds
+    
     @AppStorage("image") var image: Data = Data(count: 0)
     
     var body: some View {

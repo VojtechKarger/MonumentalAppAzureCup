@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		793F08AB2652CBC0003647CC /* TextToSpeech.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793F08AA2652CBC0003647CC /* TextToSpeech.swift */; };
+		79453FBB265CD47C0009ACB2 /* RecordButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79453FBA265CD47C0009ACB2 /* RecordButtonStyle.swift */; };
+		794F6BCB265C204C006A994F /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 794F6BCA265C204C006A994F /* Launch Screen.storyboard */; };
+		794F6BCD265C21DA006A994F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794F6BCC265C21DA006A994F /* ContentView.swift */; };
 		798C9CE5265A471A00193E23 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798C9CE4265A471A00193E23 /* WelcomeView.swift */; };
 		798C9CE9265A48A500193E23 /* ProfilePicPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798C9CE8265A48A500193E23 /* ProfilePicPicker.swift */; };
 		79929A7526523D7E00DBD76C /* MonumentalAppAzureCupApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79929A7426523D7E00DBD76C /* MonumentalAppAzureCupApp.swift */; };
@@ -43,6 +46,9 @@
 
 /* Begin PBXFileReference section */
 		793F08AA2652CBC0003647CC /* TextToSpeech.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextToSpeech.swift; sourceTree = "<group>"; };
+		79453FBA265CD47C0009ACB2 /* RecordButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordButtonStyle.swift; sourceTree = "<group>"; };
+		794F6BCA265C204C006A994F /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		794F6BCC265C21DA006A994F /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		798C9CE4265A471A00193E23 /* WelcomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		798C9CE8265A48A500193E23 /* ProfilePicPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePicPicker.swift; sourceTree = "<group>"; };
 		79929A7126523D7E00DBD76C /* MonumentalAppAzureCup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MonumentalAppAzureCup.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -106,6 +112,7 @@
 		79929A6826523D7E00DBD76C = {
 			isa = PBXGroup;
 			children = (
+				794F6BCA265C204C006A994F /* Launch Screen.storyboard */,
 				79929A7326523D7E00DBD76C /* MonumentalAppAzureCup */,
 				79929A7226523D7E00DBD76C /* Products */,
 				F9265D77ED34D57919626EAD /* Pods */,
@@ -159,6 +166,7 @@
 			isa = PBXGroup;
 			children = (
 				79929A8526523F2F00DBD76C /* Chatbot.swift */,
+				794F6BCC265C21DA006A994F /* ContentView.swift */,
 				79929AC3265275AC00DBD76C /* ImageViewChatbot.swift */,
 				79929AC1265274FF00DBD76C /* ListOfMessages.swift */,
 				79929A8626523F2F00DBD76C /* CustomTextFieldView.swift */,
@@ -182,6 +190,7 @@
 				79929A9026523F2F00DBD76C /* ExtensionView.swift */,
 				79929A9126523F2F00DBD76C /* CustomTextField.swift */,
 				79929AC926527E0100DBD76C /* ProfileImage.swift */,
+				79453FBA265CD47C0009ACB2 /* RecordButtonStyle.swift */,
 				79CC2D8C265841E4005E0262 /* SideBarButton.swift */,
 				79929A9326523F2F00DBD76C /* LoadingScreen.swift */,
 				79929A9426523F2F00DBD76C /* ExtensionGesture.swift */,
@@ -297,6 +306,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				794F6BCB265C204C006A994F /* Launch Screen.storyboard in Resources */,
 				79929A7C26523D8000DBD76C /* Preview Assets.xcassets in Resources */,
 				79929A7926523D8000DBD76C /* Assets.xcassets in Resources */,
 			);
@@ -364,6 +374,7 @@
 				79929ABC26523F3D00DBD76C /* ChatbotQuestionModel.swift in Sources */,
 				79E9B22A26590F400017C7AE /* LaunchScreen.swift in Sources */,
 				79929AA426523F2F00DBD76C /* CustomColors.swift in Sources */,
+				79453FBB265CD47C0009ACB2 /* RecordButtonStyle.swift in Sources */,
 				79929ABE26523F3D00DBD76C /* NetworkingData.swift in Sources */,
 				79929AB426523F3800DBD76C /* ChatbotModelExtensionsGetingDataFromURLress.swift in Sources */,
 				79929AA526523F2F00DBD76C /* ExtensionView.swift in Sources */,
@@ -377,6 +388,7 @@
 				79929A9C26523F2F00DBD76C /* Chatbot.swift in Sources */,
 				79929AC4265275AC00DBD76C /* ImageViewChatbot.swift in Sources */,
 				79929AC82652789F00DBD76C /* ChatbotSpeechToText.swift in Sources */,
+				794F6BCD265C21DA006A994F /* ContentView.swift in Sources */,
 				79929A9D26523F2F00DBD76C /* CustomTextFieldView.swift in Sources */,
 				798C9CE9265A48A500193E23 /* ProfilePicPicker.swift in Sources */,
 				798C9CE5265A471A00193E23 /* WelcomeView.swift in Sources */,

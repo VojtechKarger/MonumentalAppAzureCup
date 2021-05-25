@@ -16,7 +16,7 @@ import MicrosoftCognitiveServicesSpeech
 extension ChatBotModel {
     
     //MARK: - Comunication with chatbot
-    func sendMessageToAzureBot(input: String) {
+    func sendMessageToAzureBot(input: String, completion: @escaping (Message?)-> Void ) {
         
         var request = URLRequest(url: NetworkingData.chatbotUrl)
         request.httpMethod = NetworkingData.Method.POST.rawValue
@@ -54,9 +54,7 @@ extension ChatBotModel {
                 
                 let botMessage = Message(who: .bot, message: advancedMessage.plainText)
                 
-                withAnimation{
-                    self.messages.append(botMessage)
-                }
+                completion( botMessage )
             }
             
         }
