@@ -138,7 +138,7 @@ struct WelcomeView: View {
                         vm.chatbotTyping = true
                         
                         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 2.2) {
-                            vm.messages.append(Message(who: .bot, message: "Hello What can I help you with?"))
+                            vm.messages.append(Message(who: .bot, message: "Hello. What can I help you with?"))
                             vm.chatbotTyping = false
                         }
                         

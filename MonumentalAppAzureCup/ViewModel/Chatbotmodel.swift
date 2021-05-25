@@ -136,8 +136,9 @@ class ChatBotModel: NSObject, ObservableObject, AVCapturePhotoCaptureDelegate, A
                 guard mess != nil else{ return }
                 self.chatbotTyping = true
                 withAnimation {
-                    self.messages.append(mess!)
                     self.chatbotTyping = false
+                    self.messages.append(mess!)
+                    
                 }
             }
             
@@ -172,7 +173,7 @@ class ChatBotModel: NSObject, ObservableObject, AVCapturePhotoCaptureDelegate, A
         
         
         // Line 4. Specify the voice. It is explicitly set to English here, but it will use the device default if not specified.
-        speechUtterance.voice = AVSpeechSynthesisVoice(language: "cz")
+        speechUtterance.voice = AVSpeechSynthesisVoice(language: "en-US")
         
         if speechSynthesizer.isSpeaking {
         print("Speaking")
