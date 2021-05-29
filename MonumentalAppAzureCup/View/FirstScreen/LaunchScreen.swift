@@ -17,6 +17,7 @@ struct LaunchScreen: View {
     var body: some View {
         ZStack{
             Chatbot()
+                .isHidden(showingGuide, remove: true)
             Color.firstBG.ignoresSafeArea()
                 .opacity(launch ? 0 : 1)
                 .animation(.easeInOut.delay(1.7))
@@ -64,10 +65,10 @@ struct LaunchScreen: View {
         }
         DispatchQueue.main.asyncAfter(deadline: DispatchTime.now() + 1.7){
             //testing
-            showingGuide.toggle()
+            //showingGuide.toggle()
             
             //production
-            //showingGuide = firstTime
+            showingGuide = firstTime
             
             if showingGuide == false {
                 withAnimation{

@@ -63,6 +63,7 @@ struct MessageView: View {
             if let mess = message.message {
                 ZStack(alignment: .leading) {
                     Text(mess)
+                        .lineLimit(nil)
                         .padding(13)
                         .foregroundColor((message.who == .user) ? .white : .primary)
                         .background(GradientView(who: message.who))
@@ -73,9 +74,6 @@ struct MessageView: View {
                         .onAppear(perform: { vm.scroll(scroll: scroll) })
                         .onTapGesture{
                             vm.speak(messafe: message.message!)
-//                            DispatchQueue.global(qos: .userInitiated).async {
-//                                vm.synthesisToSpeaker(messageToSpeak: mess)
-//                            }
                         }
                     
                 }

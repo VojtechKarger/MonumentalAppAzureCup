@@ -54,8 +54,11 @@ struct WelcomeView: View {
                         .animation(.spring(response: 1.5, dampingFraction: 0.8, blendDuration: 100.0))
                     ZStack{
                         MessageBubble(message: "Hello, I am Peter \n And I will be your Prague guide.").offset(y: -screen.height * (middle - 1))
+                            .accessibility(label: Text("Hello, I am Peter \n And I will be your Prague guide."))
                         MessageBubble(message: "I can ansewer your messages or even to your images.").offset(y: -screen.height * (middle - 2))
-                        MessageBubble(message: "Now please chose your profile picture.").offset(y: -screen.height * (middle - 3))
+                            .accessibility(label: Text("I can ansewer your messages or even to your images."))
+                        MessageBubble(message: "Now please chose your profile picture.").offset(y: -screen.height * (middle - 3)).accessibility(label: Text("Now please chose your profile picture."))
+                            .accessibilityHidden(middle - 3 != 0)
                         ProfilePicConfirm().offset(y: -screen.height * (middle - 4))
                     }
                 }
@@ -63,9 +66,28 @@ struct WelcomeView: View {
                 Spacer()
                 
                 
+                //MARK: TODO
+                //TODO: dots showing you on what page you are..
                 HStack{
-                    
+                    Circle()
+                        .fill(currentState == .first ? Color.firstBG : Color.ghostWhite.opacity(0.5))
+                        .frame(width: 15, height: 15, alignment: .center)
+                        .padding(3)
+                    Circle()
+                        .fill(currentState == .second ? Color.firstBG : Color.ghostWhite.opacity(0.5))
+                        .frame(width: 15, height: 15, alignment: .center)
+                        .padding(3)
+                    Circle()
+                        .fill(currentState == .hide ? Color.firstBG : Color.ghostWhite.opacity(0.5))
+                        .frame(width: 15, height: 15, alignment: .center)
+                        .padding(3)
+                    Circle()
+                        .fill(currentState == .confirmPic ? Color.firstBG : Color.ghostWhite.opacity(0.5))
+                        .frame(width: 15, height: 15, alignment: .center)
+                        .padding(3)
                 }
+                .offset(y: (middle == 0) ? screen.height / 2 : 0)
+                .animation(.spring(response: 1.5, dampingFraction: 0.8, blendDuration: 100.0))
                 
                 Button(action: animation, label: {
                     Text(btnText)
@@ -74,7 +96,8 @@ struct WelcomeView: View {
                 .offset(y: (middle == 0) ? screen.height / 2 : 0)
                 .animation(.spring(response: 1.5, dampingFraction: 0.8, blendDuration: 100.0))
             }
-        }.onAppear(perform: {
+        }
+        .onAppear(perform: {
             withAnimation(.spring(response: 1.5, dampingFraction: 0.8, blendDuration: 100.0).delay(4)){
                 animation()
             }
@@ -148,6 +171,7 @@ struct WelcomeView: View {
             
         }
     }
+    
 }
 
 struct WelcomeView_Previews: PreviewProvider {
@@ -232,7 +256,7 @@ struct MessageBubble: View {
                 .fill(Color.ghostWhite)
             Text(message)
                 .multilineTextAlignment(.center)
-                .font(Font.system(size: 20).bold())
+                .font(.subheadline)
                 .padding(40)
         }.frame(width: screen.width / 1.5, height: screen.width / 2, alignment: .center)
         .padding(.bottom, screen.width / 7)
@@ -255,6 +279,7 @@ struct ProfilePicConfirm: View {
                 .scaledToFill()
                 .frame(width: screen.width / 2 - 15, height: screen.width / 2 - 15, alignment: .center)
                 .clipShape(Circle())
+                .accessibility(label: Text("profile picture."))
         }
     }
 }

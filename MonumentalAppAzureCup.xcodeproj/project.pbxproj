@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		793F08AB2652CBC0003647CC /* TextToSpeech.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793F08AA2652CBC0003647CC /* TextToSpeech.swift */; };
+		7942DD5E26617CAC005D87D8 /* Wrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7942DD5D26617CAC005D87D8 /* Wrapper.swift */; };
 		79453FBB265CD47C0009ACB2 /* RecordButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79453FBA265CD47C0009ACB2 /* RecordButtonStyle.swift */; };
 		794F6BCB265C204C006A994F /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 794F6BCA265C204C006A994F /* Launch Screen.storyboard */; };
 		794F6BCD265C21DA006A994F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794F6BCC265C21DA006A994F /* ContentView.swift */; };
@@ -38,6 +39,7 @@
 		79929AC6265277D100DBD76C /* ComunicationWithChatbot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79929AC5265277D100DBD76C /* ComunicationWithChatbot.swift */; };
 		79929AC82652789F00DBD76C /* ChatbotSpeechToText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79929AC72652789F00DBD76C /* ChatbotSpeechToText.swift */; };
 		79929ACA26527E0100DBD76C /* ProfileImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79929AC926527E0100DBD76C /* ProfileImage.swift */; };
+		7995B74A26602AC90011B262 /* SpeechToTextUIKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7995B74926602AC80011B262 /* SpeechToTextUIKit.swift */; };
 		79CC2D8D265841E4005E0262 /* SideBarButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79CC2D8C265841E4005E0262 /* SideBarButton.swift */; };
 		79E9B228265909970017C7AE /* LOGO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E9B227265909970017C7AE /* LOGO.swift */; };
 		79E9B22A26590F400017C7AE /* LaunchScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79E9B22926590F400017C7AE /* LaunchScreen.swift */; };
@@ -46,6 +48,7 @@
 
 /* Begin PBXFileReference section */
 		793F08AA2652CBC0003647CC /* TextToSpeech.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextToSpeech.swift; sourceTree = "<group>"; };
+		7942DD5D26617CAC005D87D8 /* Wrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wrapper.swift; sourceTree = "<group>"; };
 		79453FBA265CD47C0009ACB2 /* RecordButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordButtonStyle.swift; sourceTree = "<group>"; };
 		794F6BCA265C204C006A994F /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		794F6BCC265C21DA006A994F /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -78,6 +81,7 @@
 		79929AC5265277D100DBD76C /* ComunicationWithChatbot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComunicationWithChatbot.swift; sourceTree = "<group>"; };
 		79929AC72652789F00DBD76C /* ChatbotSpeechToText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatbotSpeechToText.swift; sourceTree = "<group>"; };
 		79929AC926527E0100DBD76C /* ProfileImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileImage.swift; sourceTree = "<group>"; };
+		7995B74926602AC80011B262 /* SpeechToTextUIKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechToTextUIKit.swift; sourceTree = "<group>"; };
 		79CC2D8C265841E4005E0262 /* SideBarButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SideBarButton.swift; sourceTree = "<group>"; };
 		79E9B227265909970017C7AE /* LOGO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LOGO.swift; sourceTree = "<group>"; };
 		79E9B22926590F400017C7AE /* LaunchScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaunchScreen.swift; sourceTree = "<group>"; };
@@ -202,6 +206,8 @@
 			isa = PBXGroup;
 			children = (
 				79929A9626523F2F00DBD76C /* SpeechToTextView.swift */,
+				7995B74926602AC80011B262 /* SpeechToTextUIKit.swift */,
+				7942DD5D26617CAC005D87D8 /* Wrapper.swift */,
 			);
 			path = VoiceRecorder;
 			sourceTree = "<group>";
@@ -369,6 +375,7 @@
 				79929AC2265274FF00DBD76C /* ListOfMessages.swift in Sources */,
 				793F08AB2652CBC0003647CC /* TextToSpeech.swift in Sources */,
 				79929ABD26523F3D00DBD76C /* ModelNetworking.swift in Sources */,
+				7942DD5E26617CAC005D87D8 /* Wrapper.swift in Sources */,
 				79929ABF26523F3D00DBD76C /* ChatbotAnswer.swift in Sources */,
 				79929A7526523D7E00DBD76C /* MonumentalAppAzureCupApp.swift in Sources */,
 				79929ABC26523F3D00DBD76C /* ChatbotQuestionModel.swift in Sources */,
@@ -385,6 +392,7 @@
 				79CC2D8D265841E4005E0262 /* SideBarButton.swift in Sources */,
 				79E9B228265909970017C7AE /* LOGO.swift in Sources */,
 				79929A9F26523F2F00DBD76C /* ImagePicker.swift in Sources */,
+				7995B74A26602AC90011B262 /* SpeechToTextUIKit.swift in Sources */,
 				79929A9C26523F2F00DBD76C /* Chatbot.swift in Sources */,
 				79929AC4265275AC00DBD76C /* ImageViewChatbot.swift in Sources */,
 				79929AC82652789F00DBD76C /* ChatbotSpeechToText.swift in Sources */,

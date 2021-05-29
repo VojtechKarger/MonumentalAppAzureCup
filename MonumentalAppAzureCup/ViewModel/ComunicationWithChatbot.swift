@@ -34,10 +34,30 @@ extension ChatBotModel {
         request.httpBody = encodedBody
         
         let task = URLSession.shared.dataTask(with: request){ data, _, err in
+            
+            guard err == nil else{
+                let ac = UIAlertController(title: "error", message: err!.localizedDescription , preferredStyle: .alert)
+                ac.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                
+                let viewController = UIApplication.shared.windows.first!.rootViewController!
+                DispatchQueue.main.async {
+                    viewController.present(ac, animated: true, completion: nil)
+                }
+                print("error")
+                return
+            }
+            
             guard let data = data else { print(err ?? "error"); return }
             print(String(data: data, encoding: .utf8)!)
             
-            guard let decoded = try? JSONDecoder().decode(BotsAnswer.self, from: data) else { print("jaaaaj");return }
+            guard let decoded = try? JSONDecoder().decode(BotsAnswer.self, from: data) else {
+                print("jaaaaj")
+                let botMessage = Message(who: .bot, message: "Sorry. I dont understand you.")
+                DispatchQueue.main.async {
+                    completion( botMessage )
+                }
+                return
+            }
             print(decoded)
             
             let advancedMessage: AdvancedMessage = self.getAdvancedMessage(decoded.answers[0].answer)
@@ -86,6 +106,19 @@ extension ChatBotModel {
         request.httpBody = encodedBody
         
         let task = URLSession.shared.dataTask(with: request){ data, _, err in
+            
+            guard err == nil else{
+                let ac = UIAlertController(title: "error", message: err!.localizedDescription , preferredStyle: .alert)
+                ac.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+                
+                let viewController = UIApplication.shared.windows.first!.rootViewController!
+                DispatchQueue.main.async {
+                    viewController.present(ac, animated: true, completion: nil)
+                }
+                print("error")
+                return
+            }
+            
             guard let data = data else { print(err ?? "error"); return }
             print(String(data: data, encoding: .utf8)!)
             

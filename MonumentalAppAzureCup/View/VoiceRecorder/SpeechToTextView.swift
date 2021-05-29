@@ -1,9 +1,4 @@
 //
-//  SpeechToTextView.swift
-//  Pamatkovac verze 3
-//
-//  Created by vojta on 14.05.2021.
-//
 
 import SwiftUI
 
@@ -12,8 +7,14 @@ struct SpeechToTextView: View {
     
     var body: some View {
         ZStack {
-            Button(action: vm.recognizeMic, label: { Text("").frame(width: 50, height: 50, alignment: .center) })
-                .buttonStyle(RecordButton())
+            GeometryReader { geo in
+                let frame = geo.frame(in: .global)
+                Wrapper()
+                    .frame(width: frame.width, height: frame.height)
+                    .onAppear {
+                        print(frame)
+                    }
+            }.frame(height: 200)
             VStack{
                 Divider()
                     .background(Color.azure)

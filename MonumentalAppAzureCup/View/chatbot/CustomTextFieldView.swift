@@ -11,6 +11,8 @@ struct CustomTextField: View {
     @ObservedObject var vm: ChatBotModel
     @Binding var textfieldIsActive: Bool
     
+    
+    let pub = NotificationCenter.default.publisher(for: NSNotification.Name.updateLabel)
     var scroll: ScrollViewProxy
     
     var body: some View {
@@ -86,6 +88,11 @@ struct CustomTextField: View {
                         vm.showingRecordingScreen = false
                     }
                 }
+                    .onReceive(pub, perform: { output in
+                        if let userInfo = output.userInfo, let text = userInfo["text"] {
+                            vm.message = text as! String 
+                        }
+                    })
                 
                 Button(action: sendMessage , label: {
                     Image(systemName: "paperplane.fill")

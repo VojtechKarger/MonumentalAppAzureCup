@@ -19,8 +19,8 @@ struct NetworkingData {
     
     
     
-    static let chatbotUrl: URL = URL(string: "https://pomocnikpetr.azurewebsites.net/qnamaker/knowledgebases/56aa3c4e-7236-4282-b30a-eb22c3ee168e/generateAnswer")!
-    static let chatbotAuthKey: String = "EndpointKey 868782d7-1681-450b-8f1f-04d640acec30"
+    static let chatbotUrl: URL = URL(string: "https://pomocnikpetr.azurewebsites.net/qnamaker//knowledgebases/56aa3c4e-7236-4282-b30a-eb22c3ee168e/generateAnswer")!
+    static let chatbotAuthKey: String = " EndpointKey 868782d7-1681-450b-8f1f-04d640acec30"
     
     
     

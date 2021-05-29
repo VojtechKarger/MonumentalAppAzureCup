@@ -42,13 +42,11 @@ class ChatBotModel: NSObject, ObservableObject, AVCapturePhotoCaptureDelegate, A
     @Published var showingRecordingScreen = false
     
     @Published var betterMessage: AdvancedMessage?
-    
-    
+
     
     @Published var chatbotTyping: Bool = false {
         didSet { print(chatbotTyping) }
     }
-    
     //comunication with chatbot
     var QnaAId: Int?
     var previousUserQuery: String?
@@ -131,6 +129,22 @@ class ChatBotModel: NSObject, ObservableObject, AVCapturePhotoCaptureDelegate, A
             guard let decoded = try? JSONDecoder().decode(NetworkingModel.self, from: data) else { print("chyba");return }
         
             print(decoded)
+            
+            guard !decoded.predictions[0].tagName.lowercased().contains("unknown") else {
+                
+                let botMessage = Message(who: .bot, message: "It is not monument that I know or not monument at all.")
+                
+                DispatchQueue.main.async {
+                    self.chatbotTyping = true
+                    withAnimation {
+                        self.chatbotTyping = false
+                        self.messages.append(botMessage)
+                    }
+                }
+                
+                return
+            }
+            
             
             self.sendMessageToAzureBot(input: decoded.predictions[0].tagName){ mess in
                 guard mess != nil else{ return }
