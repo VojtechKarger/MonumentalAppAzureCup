@@ -42,7 +42,13 @@ Vzhledem k tomu že naše aplikace využívá microsoft knihovnu která nepodpor
 * aplikace
 * backend
 #### ios aplikace
-Nase ios aplikace je vytvořená v jazyce Swift a jeho frontendové knihovně SwiftUI. Dále jsme využili knihovnu od microsoftu MicrosoftCognitiveServicesSpeech-iOS.
+Naše ios aplikace je vytvořená v jazyce Swift a jeho frontendové knihovně SwiftUI. Dále jsme využili knihovnu od microsoftu MicrosoftCognitiveServicesSpeech-iOS.
 
 #### backend
-Dan napíše....
+ Co se týče backendu tak ten je celý v Azure. <br>
+ Využili jsme 3 jeho služby: 
+ * speech to text - cognitive services speech
+ * Chatbot - QnA maker
+ * AI image classification - Custom vision
+
+
