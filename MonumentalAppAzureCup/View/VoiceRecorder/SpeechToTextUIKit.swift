@@ -8,7 +8,7 @@ import MicrosoftCognitiveServicesSpeech
 import UIKit
 
 class CustomView: UIViewController {
-    
+
     lazy var button: UIButton = {
         var btn = UIButton()
         btn.layer.borderColor = UIColor(.azure).cgColor
@@ -30,7 +30,6 @@ class CustomView: UIViewController {
         return btn
     }()
     
-    
     var sub: String!
     var region: String!
     
@@ -39,7 +38,7 @@ class CustomView: UIViewController {
         region = "eastus"
         
         print(self.view.frame)
-        self.view.backgroundColor = UIColor(.firstBG)
+        self.view.backgroundColor = UIColor(named: "firstBG")
         
         setUpViews()
         setUpConstraits()
@@ -57,13 +56,10 @@ class CustomView: UIViewController {
             button.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             button.widthAnchor.constraint(equalToConstant: 50),
             button.heightAnchor.constraint(equalTo: button.widthAnchor)
+            
         ])
         
-        
     }
-    
-    
-    
     
     @objc func fromMicButtonClicked() {
         DispatchQueue.global(qos: .userInitiated).async {
@@ -72,6 +68,8 @@ class CustomView: UIViewController {
     }
     
     func recognizeFromMic() {
+         //2
+        
         var speechConfig: SPXSpeechConfiguration?
         do {
             try speechConfig = SPXSpeechConfiguration(subscription: sub, region: region)
@@ -96,6 +94,7 @@ class CustomView: UIViewController {
         let result = try! reco.recognizeOnce()
         print("recognition result: \(result.text ?? "(no result)")")
         updateLabel(text: result.text, color: UIColor(.azure))
+    
     }
     
     func updateLabel(text: String?, color: UIColor) {
@@ -109,5 +108,5 @@ class CustomView: UIViewController {
 
 
 extension Notification.Name {
-    static let updateLabel = Notification.Name.init("labelUpdate")
+    static let updateLabel = Notification.Name("labelUpdate")
 }

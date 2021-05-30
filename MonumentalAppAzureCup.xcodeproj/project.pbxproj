@@ -12,6 +12,7 @@
 		79453FBB265CD47C0009ACB2 /* RecordButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79453FBA265CD47C0009ACB2 /* RecordButtonStyle.swift */; };
 		794F6BCB265C204C006A994F /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 794F6BCA265C204C006A994F /* Launch Screen.storyboard */; };
 		794F6BCD265C21DA006A994F /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 794F6BCC265C21DA006A994F /* ContentView.swift */; };
+		7988E8AD26640D5100509A60 /* SpeechIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7988E8AC26640D5100509A60 /* SpeechIndicator.swift */; };
 		798C9CE5265A471A00193E23 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798C9CE4265A471A00193E23 /* WelcomeView.swift */; };
 		798C9CE9265A48A500193E23 /* ProfilePicPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 798C9CE8265A48A500193E23 /* ProfilePicPicker.swift */; };
 		79929A7526523D7E00DBD76C /* MonumentalAppAzureCupApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79929A7426523D7E00DBD76C /* MonumentalAppAzureCupApp.swift */; };
@@ -52,6 +53,7 @@
 		79453FBA265CD47C0009ACB2 /* RecordButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecordButtonStyle.swift; sourceTree = "<group>"; };
 		794F6BCA265C204C006A994F /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		794F6BCC265C21DA006A994F /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		7988E8AC26640D5100509A60 /* SpeechIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechIndicator.swift; sourceTree = "<group>"; };
 		798C9CE4265A471A00193E23 /* WelcomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
 		798C9CE8265A48A500193E23 /* ProfilePicPicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfilePicPicker.swift; sourceTree = "<group>"; };
 		79929A7126523D7E00DBD76C /* MonumentalAppAzureCup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MonumentalAppAzureCup.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -207,6 +209,7 @@
 			children = (
 				79929A9626523F2F00DBD76C /* SpeechToTextView.swift */,
 				7995B74926602AC80011B262 /* SpeechToTextUIKit.swift */,
+				7988E8AC26640D5100509A60 /* SpeechIndicator.swift */,
 				7942DD5D26617CAC005D87D8 /* Wrapper.swift */,
 			);
 			path = VoiceRecorder;
@@ -388,6 +391,7 @@
 				79929AA826523F2F00DBD76C /* LoadingScreen.swift in Sources */,
 				79929AC6265277D100DBD76C /* ComunicationWithChatbot.swift in Sources */,
 				79929AA626523F2F00DBD76C /* CustomTextField.swift in Sources */,
+				7988E8AD26640D5100509A60 /* SpeechIndicator.swift in Sources */,
 				79929AAA26523F2F00DBD76C /* SpeechToTextView.swift in Sources */,
 				79CC2D8D265841E4005E0262 /* SideBarButton.swift in Sources */,
 				79E9B228265909970017C7AE /* LOGO.swift in Sources */,

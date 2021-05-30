@@ -64,10 +64,7 @@ struct WelcomeView: View {
                 }
 
                 Spacer()
-                
-                
-                //MARK: TODO
-                //TODO: dots showing you on what page you are..
+
                 HStack{
                     Circle()
                         .fill(currentState == .first ? Color.firstBG : Color.ghostWhite.opacity(0.5))
@@ -256,7 +253,7 @@ struct MessageBubble: View {
                 .fill(Color.ghostWhite)
             Text(message)
                 .multilineTextAlignment(.center)
-                .font(.subheadline)
+                .font(.system(size: screen.width / 20))
                 .padding(40)
         }.frame(width: screen.width / 1.5, height: screen.width / 2, alignment: .center)
         .padding(.bottom, screen.width / 7)

@@ -63,8 +63,9 @@ struct MessageView: View {
             if let mess = message.message {
                 ZStack(alignment: .leading) {
                     Text(mess)
-                        .lineLimit(nil)
+                        .lineLimit(25)
                         .padding(13)
+                        .fixedSize(horizontal: false, vertical: true)
                         .foregroundColor((message.who == .user) ? .white : .primary)
                         .background(GradientView(who: message.who))
                         .clipShape(RoundedRectangle(cornerRadius: 22.0))
