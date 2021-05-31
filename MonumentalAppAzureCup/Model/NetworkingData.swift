@@ -11,19 +11,18 @@ import Foundation
 
 struct NetworkingData {
     
-    static let urlCV: URL =  URL(string: "https://monumentclassifiertrain.cognitiveservices.azure.com/customvision/v3.0/Prediction/4e3e5ac4-18ad-409c-a370-ae274cdd615a/classify/iterations/pre-release/image")!
-    static let predictionKeyCV: String = "ab54d83d41414c48a8ecaefd6a8a1245"
-    
-    static let subSpeechToText = "3e592cabca284a3cbd03a446f68a1e1b"
-    static let regionSpeechToText = "eastus"
-    
-    
-    
-    static let chatbotUrl: URL = URL(string: "https://pomocnikpetr.azurewebsites.net/qnamaker//knowledgebases/56aa3c4e-7236-4282-b30a-eb22c3ee168e/generateAnswer")!
-    static let chatbotAuthKey: String = " EndpointKey 868782d7-1681-450b-8f1f-04d640acec30"
-    
-    
-    
+    //MARK: - Uncoment the code bellow and swap placeholders with your data...
+//    static let urlCV: URL =  URL(string: "your url to custom vison model")!
+//    static let predictionKeyCV: String = "your prediction key custom vision"
+//
+//    static let subSpeechToText = "speech to text subscription key"
+//    static let regionSpeechToText = "your speech to text region"
+//
+//
+//
+//    static let chatbotUrl: URL = URL(string: "your url to your QnAMaker Bor")!
+//    static let chatbotAuthKey: String = "your auth key in format: EndpointKey <key>"
+
     enum Method: String {
         case POST
         case GET
